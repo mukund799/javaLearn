@@ -64,3 +64,55 @@
 	•	public: The field or method is accessible from anywhere.
 	•	protected: Accessible within the package and subclasses.
 	•	default: Accessible within the package.
+
+2. Inheritance
+   Types of Inheritance in Java
+	1. Single Inheritance
+        One child class inherits from one parent class.
+        Example: Dog inherits from Animal.
+    2. Multilevel Inheritance
+        A chain of inheritance, where a class inherits from another class, which in turn inherits from another class.
+        Example:
+        ```java
+        class Animal {
+            void eat() {
+                System.out.println("This animal eats food.");
+            }
+        }
+
+        class Mammal extends Animal {
+            void walk() {
+                System.out.println("This mammal walks.");
+            }
+        }
+
+        class Dog extends Mammal {
+            void bark() {
+                System.out.println("The dog barks.");
+            }
+        }
+        ```
+    3. Hierarchical Inheritance
+        Multiple child classes inherit from a single parent class.
+        Example:
+        ```java
+        class Animal {
+            void eat() {
+                System.out.println("This animal eats food.");
+            }
+        }
+
+        class Cat extends Animal {
+            void meow() {
+                System.out.println("The cat meows.");
+            }
+        }
+
+        class Dog extends Animal {
+            void bark() {
+                System.out.println("The dog barks.");
+            }
+        }
+        ```
+    4. Multiple Inheritance (via Interfaces)
+        Java does not support multiple inheritance with classes to avoid ambiguity. Instead, it supports multiple inheritance using interfaces.
